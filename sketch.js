@@ -7,6 +7,9 @@ function setup() {
 }
 
 function draw() {
+      	if (getAudioContext().state !== 'running') {
+        getAudioContext().resume();
+    	 }
   background(220);
   smile(width*0.5,height*0.5,200);
   noStroke();
